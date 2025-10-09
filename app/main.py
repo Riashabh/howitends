@@ -16,7 +16,7 @@ async def root():
 @app.post("/check-ending")
 async def check_ending(movie: dict):
     title =movie["title"]
-    prompt = f"Return only one word happy sad bittersweet or ambiguous that best describes the overall ending of the {title} It could be a movie series anime or book Do not include any explanation or extra text If information about the ending is not found in existing data search the web for reliable summaries before responding"
+    prompt = os.getenv("AI_PROMPT").format(title=movie["title"])
 
     response = client.responses.create(
         model="gpt-4o",
