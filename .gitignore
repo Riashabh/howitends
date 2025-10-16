@@ -1,12 +1,14 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
-.DS_Store
-
-# Virtual environments
-.venv
+*.pyc
+venv/
 .env
+
+# Node / React
+node_modules/
+dist/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
